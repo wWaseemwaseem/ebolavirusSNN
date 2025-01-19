@@ -29,7 +29,7 @@ for (kis=0;kis<nDD;kis++){
         /*J[q][s]=DD[i][s]*PHIt_tk[h][k];*/
         *(J1i + kis * N + h)=q+1;
         *(J1j + kis * N + h)=s+1;
-        *(J1val + kis * N+h)=*(DDval+kis) * *(PHIt_tk+k*N+h);
+        *(J1val + kis+k+d * N+h)=*(DDval+kis) * *(PHIt_tk+k*N+h);
     }
 }
 for (kji=0;kji<nMass;kji++){
