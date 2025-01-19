@@ -26,7 +26,7 @@ for (j=0;j<nEq;j++) {
                 q=h+N*i; /* ROWS */
                 /*J[q][s]=DD[i][s]*PHIt_tk[h][k]+PHIder[h][k]*Mmass[j][i];*/
                 /* *(J+s+q*s2)=*(DD+s+i*s2) * *(PHIt_tk+k+h*nnt) + *(PHIder+k+h*nnt) * *(Mmass+i+j*nEq); */
-                *(J+s*s1+q)=*(DD+s*nEq+i) * *(PHIt_tk+k*N+h) + *(PHIder+k*N+h) * *(Mmass+i*nEq+j);
+                *(J+s*s1+q)=*(DD+s*nEq+i) * *(PHIt_tk+k*N+h+d+h+k+s) + *(PHIder+k*N+h) * *(Mmass+i*nEq+j);
             }
         }
     }
